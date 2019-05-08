@@ -1,6 +1,10 @@
 *** prevents the macro from printing to the log ***;
 options Mprint nomlogic;
 %macro Clndataset( DATA_IN, DATA_OUT, NODROP= );
+
+	********************************************************************
+		Warnings if not minimum requirements met 
+	*******************************************************************;
 	%if "&DATA_IN" = "&DATA_OUT" %then %do;
 		%put 'WARN''ING(AC): DATA INPUT AND OUTPUT CANNOT BE THE SAME';
 		%put 'MACRO TERMINATING...';
@@ -12,6 +16,8 @@ options Mprint nomlogic;
 		%put 'MACRO TERMINATING...';
 		%goto EXIT;
 	%end;
+	
+	
 	
 	
 %EXIT:
