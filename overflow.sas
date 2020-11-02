@@ -131,12 +131,12 @@ proc sql noprint;
     %let vlistn = %eval(&sqlobs - 1);
     %let obsn = &sqlobs;
 quit;
-%put &vlistn;
+/*%put &vlistn;*/
 /*%put &varname0;*/
 /*%put &varname1;*/
-%put &totlen0;
+/*%put &totlen0;*/
 /*%put &totlen1;*/
-%put &len0;
+/*%put &len0;/
 /*%put &len1;*/
 
 *************************************************************************************
