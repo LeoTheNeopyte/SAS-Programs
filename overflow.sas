@@ -169,7 +169,7 @@ data _&data (drop = m_x m_left m_leftN m_right m_rightN m_head m_leng);
             m_rightN = m_leng;
         end;
         else do;
-            m_leftN = findc(substr(&&varname&i., m_left, 200), ' ', "bi");
+            m_leftN = findc(substr(&&varname&i., m_left, 201), ' ', "bi");
             m_rightN = m_head + findc(substr(&&varname&i., m_head+1), ' ', "i");
         end;
         if m_x = 1 & ~missing(&&varname&i.) then do;
